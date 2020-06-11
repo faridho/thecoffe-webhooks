@@ -6,7 +6,7 @@ const
     app = express().use(bodyParser.json()), 
     request = require('request');
 
-app.get("/", res => {
+app.get("/", (req, res) => {
     res.send("Deployed!");
 });
 
