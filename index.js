@@ -26,6 +26,7 @@ app.post('/webhook', (req, res) => {
             if (webhook_event.message) {
                 handleMessage(sender_psid, webhook_event.message);
             } else if (webhook_event.postback) {
+                console.log(2)
                 handlePostback(sender_psid, webhook_event.postback);
             }
 
@@ -169,6 +170,7 @@ function handlePostback(sender_psid, received_postback) {
 
     // Set the response based on the postback payload
     if (payload === 'menu') {
+        console.log(1)
         handleMessage(sender_psid, 'menus')
     } else if (payload === 'wallet') {
         response = { "text": "Oops, try sending another image." }
