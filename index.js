@@ -122,6 +122,23 @@ function handlePostback(sender_psid, received_postback) {
                                 "payload": "wallet",
                             }
                         ],
+                    },
+                    {
+                        "title": "Welcome to best Korean Resraurant",
+                        "subtitle": "Fresh, Organic & Delicious",
+                        "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592147855/KOREAN/CARD/cafe-984275_640.jpg",
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "Select Menu",
+                                "payload": "menu",
+                            },
+                            {
+                                "type": "postback",
+                                "title": "Check Wallet",
+                                "payload": "wallet",
+                            }
+                        ],
                     }]
                 }
             }
