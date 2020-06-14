@@ -99,7 +99,7 @@ function handlePostback(sender_psid, received_postback) {
     let payload = received_postback.payload;
 
     // Set the response based on the postback payload
-    if (payload === 'yes') {
+    if (payload === 'menu') {
         response = {
             "attachment": {
                 "type": "template",
@@ -165,7 +165,7 @@ function handlePostback(sender_psid, received_postback) {
                 }
             }
         }
-    } else if (payload === 'no') {
+    } else if (payload === 'wallet') {
         response = { "text": "Oops, try sending another image." }
     }
     // Send the message to acknowledge the postback
