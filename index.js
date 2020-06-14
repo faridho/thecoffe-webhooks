@@ -106,53 +106,23 @@ function handlePostback(sender_psid, received_postback) {
                 "payload": {
                     "template_type": "list",
                     "top_element_style": "compact",
-                    "elements": [
-                        {
-                            "title": "Classic T-Shirt Collection",
-                            "subtitle": "See all our colors",
-                            "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592148833/KOREAN/CARD/hamburger-494706_640.jpg",
-                            "buttons": [
-                                {
-                                    "title": "View",
-                                    "type": "web_url",
-                                    "url": "https://peterssendreceiveapp.ngrok.io/collection",
-                                    "messenger_extensions": true,
-                                    "webview_height_ratio": "tall",
-                                    "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Classic T-Shirt Collection",
-                            "subtitle": "See all our colors",
-                            "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592148833/KOREAN/CARD/hamburger-494706_640.jpg",
-                            "buttons": [
-                                {
-                                    "title": "View",
-                                    "type": "web_url",
-                                    "url": "https://peterssendreceiveapp.ngrok.io/collection",
-                                    "messenger_extensions": true,
-                                    "webview_height_ratio": "tall",
-                                    "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Classic T-Shirt Collection",
-                            "subtitle": "See all our colors",
-                            "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592148833/KOREAN/CARD/hamburger-494706_640.jpg",
-                            "buttons": [
-                                {
-                                    "title": "View",
-                                    "type": "web_url",
-                                    "url": "https://peterssendreceiveapp.ngrok.io/collection",
-                                    "messenger_extensions": true,
-                                    "webview_height_ratio": "tall",
-                                    "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                                }
-                            ]
-                        }
-                    ]
+                    "elements": [{
+                        "title": "Welcome to best Korean Resraurant",
+                        "subtitle": "Fresh, Organic & Delicious",
+                        "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592147855/KOREAN/CARD/cafe-984275_640.jpg",
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "Select Menu",
+                                "payload": "menus",
+                            },
+                            {
+                                "type": "postback",
+                                "title": "Check Wallet",
+                                "payload": "wallet",
+                            }
+                        ],
+                    }]
                 }
             }
         }
