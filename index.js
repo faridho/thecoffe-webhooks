@@ -107,36 +107,26 @@ function handlePostback(sender_psid, received_postback) {
                 "payload": {
                     "template_type": "generic",
                     "elements": [{
-                        "title": "Welcome to best Korean Resraurant",
-                        "subtitle": "Fresh, Organic & Delicious",
-                        "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592147855/KOREAN/CARD/cafe-984275_640.jpg",
+                        "title": "Humbergur",
+                        "subtitle": "Price: S 40K, M 45K, L 50K",
+                        "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592148833/KOREAN/CARD/hamburger-494706_640.jpg",
                         "buttons": [
                             {
                                 "type": "postback",
-                                "title": "Select Menu",
-                                "payload": "menu",
-                            },
-                            {
-                                "type": "postback",
-                                "title": "Check Wallet",
-                                "payload": "wallet",
+                                "title": "Pick",
+                                "payload": "pick",
                             }
                         ],
                     },
                     {
-                        "title": "Welcome to best Korean Resraurant",
-                        "subtitle": "Fresh, Organic & Delicious",
-                        "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592147855/KOREAN/CARD/cafe-984275_640.jpg",
+                        "title": "Pizza",
+                        "subtitle": "Price: S 40K, M 45K, L 50K",
+                        "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592148832/KOREAN/CARD/pizza-2068272_640.jpg",
                         "buttons": [
                             {
                                 "type": "postback",
-                                "title": "Select Menu",
-                                "payload": "menu",
-                            },
-                            {
-                                "type": "postback",
-                                "title": "Check Wallet",
-                                "payload": "wallet",
+                                "title": "Pick",
+                                "payload": "pick",
                             }
                         ],
                     }]
@@ -144,7 +134,7 @@ function handlePostback(sender_psid, received_postback) {
             }
         }
     } else if (payload === 'wallet') {
-        response = { "text": "Oops, try sending another image." }
+        response = { "text": "Will soon" }
     }
     // Send the message to acknowledge the postback
     callSendAPI(sender_psid, response);
