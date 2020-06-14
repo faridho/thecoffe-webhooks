@@ -105,133 +105,29 @@ function handlePostback(sender_psid, received_postback) {
             "attachment": {
                 "type": "template",
                 "payload": {
-                    "template_type": "list",
-                    "top_element_style": "compact",
-                    "elements": [
-                        {
-                            "title": "Classic T-Shirt Collection",
-                            "subtitle": "See all our colors",
-                            "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592148833/KOREAN/CARD/hamburger-494706_640.jpg",
-                            "buttons": [
-                                {
-                                    "title": "View",
-                                    "type": "web_url",
-                                    "url": "https://peterssendreceiveapp.ngrok.io/collection",
-                                    "messenger_extensions": true,
-                                    "webview_height_ratio": "tall",
-                                    "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Classic White T-Shirt",
-                            "subtitle": "See all our colors",
-                            "default_action": {
-                                "type": "web_url",
-                                "url": "https://peterssendreceiveapp.ngrok.io/view?item=100",
-                                "messenger_extensions": false,
-                                "webview_height_ratio": "tall"
-                            }
-                        },
-                        {
-                            "title": "Classic Blue T-Shirt",
-                            "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592148832/KOREAN/CARD/pizza-2068272_640.jpg",
-                            "subtitle": "100% Cotton, 200% Comfortable",
-                            "default_action": {
-                                "type": "web_url",
-                                "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
-                                "messenger_extensions": true,
-                                "webview_height_ratio": "tall",
-                                "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                    "template_type": "generic",
+                    "elements": [{
+                        "title": "Welcome to best Korean Resraurant",
+                        "subtitle": "Fresh, Organic & Delicious",
+                        "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592147855/KOREAN/CARD/cafe-984275_640.jpg",
+                        "buttons": [
+                            {
+                                "type": "postback",
+                                "title": "Select Menu",
+                                "payload": "menu",
                             },
-                            "buttons": [
-                                {
-                                    "title": "Shop Now",
-                                    "type": "web_url",
-                                    "url": "https://peterssendreceiveapp.ngrok.io/shop?item=101",
-                                    "messenger_extensions": true,
-                                    "webview_height_ratio": "tall",
-                                    "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                                }
-                            ]
-                        }
-                    ],
-                    "buttons": [
-                        {
-                            "title": "View More",
-                            "type": "postback",
-                            "payload": "payload"
-                        }
-                    ]
+                            {
+                                "type": "postback",
+                                "title": "Check Wallet",
+                                "payload": "wallet",
+                            }
+                        ],
+                    }]
                 }
             }
         }
     } else if (payload === 'wallet') {
-        response = {
-            "attachment": {
-                "type": "template",
-                "payload": {
-                    "template_type": "list",
-                    "top_element_style": "compact",
-                    "elements": [
-                        {
-                            "title": "Classic T-Shirt Collection",
-                            "subtitle": "See all our colors",
-                            "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592148833/KOREAN/CARD/hamburger-494706_640.jpg",
-                            "buttons": [
-                                {
-                                    "title": "View",
-                                    "type": "web_url",
-                                    "url": "https://peterssendreceiveapp.ngrok.io/collection",
-                                    "messenger_extensions": true,
-                                    "webview_height_ratio": "tall",
-                                    "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                                }
-                            ]
-                        },
-                        {
-                            "title": "Classic White T-Shirt",
-                            "subtitle": "See all our colors",
-                            "default_action": {
-                                "type": "web_url",
-                                "url": "https://peterssendreceiveapp.ngrok.io/view?item=100",
-                                "messenger_extensions": false,
-                                "webview_height_ratio": "tall"
-                            }
-                        },
-                        {
-                            "title": "Classic Blue T-Shirt",
-                            "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592148832/KOREAN/CARD/pizza-2068272_640.jpg",
-                            "subtitle": "100% Cotton, 200% Comfortable",
-                            "default_action": {
-                                "type": "web_url",
-                                "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
-                                "messenger_extensions": true,
-                                "webview_height_ratio": "tall",
-                                "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                            },
-                            "buttons": [
-                                {
-                                    "title": "Shop Now",
-                                    "type": "web_url",
-                                    "url": "https://peterssendreceiveapp.ngrok.io/shop?item=101",
-                                    "messenger_extensions": true,
-                                    "webview_height_ratio": "tall",
-                                    "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
-                                }
-                            ]
-                        }
-                    ],
-                    "buttons": [
-                        {
-                            "title": "View More",
-                            "type": "postback",
-                            "payload": "payload"
-                        }
-                    ]
-                }
-            }
-        }
+        response = { "text": "Oops, try sending another image." }
     }
     // Send the message to acknowledge the postback
     callSendAPI(sender_psid, response);
