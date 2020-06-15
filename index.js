@@ -56,8 +56,12 @@ app.get('/webhook', (req, res) => {
 });
 
 function handleMessage(sender_psid, received_message) {
-    let response = resources.welcome;
-
+    let response;
+    if(received_message === 'Just one' || received_message === 'Maybe two') {
+        response = resources.orderAgain;
+    } else {
+        response = resources.welcome;
+    }
 
     callSendAPI(sender_psid, response);
 }
@@ -83,7 +87,7 @@ function handlePostback(sender_psid, received_postback) {
                     "payload": "qty",
                 }, {
                     "content_type": "text",
-                    "title": "maybe two",
+                    "title": "Maybe two",
                     "payload": "qty",
                 }
             ]
