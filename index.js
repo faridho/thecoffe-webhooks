@@ -63,9 +63,10 @@ function handleMessage(sender_psid, received_message) {
 function handlePostback(sender_psid, received_postback) {
     let response;
     let payload = received_postback.payload;
+    console.log(payload)
     const postbackData = {
         'menu': resources.menu,
-        'qty': { "text": "Ask Address ya" },
+        'qty': resources.orderAgain,
         'order': { "text": "Ask Address" }
     }
 
