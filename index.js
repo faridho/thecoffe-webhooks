@@ -56,10 +56,7 @@ app.get('/webhook', (req, res) => {
 });
 
 function handleMessage(sender_psid, received_message) {
-    if(received_message === '')
     let response = resources.welcome;
-
-
     callSendAPI(sender_psid, response);
 }
 
