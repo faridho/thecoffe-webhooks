@@ -66,28 +66,12 @@ function handlePostback(sender_psid, received_postback) {
     console.log(payload)
     const postbackData = {
         'menu': resources.menu,
-        'qty': resources.orderAgain,
-        'order': { "text": "Ask Address" }
+        'detail': resources.detail,
+        'tix': resources.tix
     }
 
-    if (payload === 'menu' || payload === 'qty' || payload === 'order') {
+    if (payload === 'menu') {
         response = postbackData[payload]
-    } else {
-        response = {
-            "text": `Great 👍 You chosen the best menu is ${payload}. So, how many you will order?`,
-            "quick_replies": [
-                {
-                    "content_type": "text",
-                    "title": "Just one",
-                    "payload": "qty",
-                }, {
-                    "content_type": "text",
-                    "title": "Maybe two",
-                    "payload": "qty",
-                }
-            ]
-        }
-
     }
 
     callSendAPI(sender_psid, response);

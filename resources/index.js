@@ -4,13 +4,13 @@ const welcome = {
         "payload": {
             "template_type": "generic",
             "elements": [{
-                "title": "Welcome to the best Korean Restaurant",
-                "subtitle": "Please tap button below to select menus",
-                "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592231983/KOREAN%20RESTAURANT/Welcome.jpg",
+                "title": "Welcome to the bot korean fans info",
+                "subtitle": "Please tap button below to select info",
+                "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1596347553/KOREAN%20RESTAURANT/tvN-Logo-South-Korea-BPO.jpg",
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Select Menu",
+                        "title": "Select Info",
                         "payload": "menu",
                     }
                 ],
@@ -19,24 +19,32 @@ const welcome = {
     }
 }
 
-const orderAgain = {
+const cards = {
     "attachment": {
         "type": "template",
         "payload": {
             "template_type": "generic",
             "elements": [{
-                "title": "SIAP!😊",
-                "subtitle": "Please tap button below to another choices",
+                "title": "Itaewon Class - New Episode 8",
+                "subtitle": "Bad news strikes DanBam, but Saeroyi isn't one to bow under pressure. Geun-soo learns a horrible truth. Kim Toni deals with discrimination.",
+                "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1596348696/KOREAN%20RESTAURANT/b9577f4070b1bb7901f893cabbeca98e.jpg",
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Select Menu",
-                        "payload": "menu",
-                    },
+                        "title": "Pick",
+                        "payload": "detail",
+                    }
+                ],
+            },
+            {
+                "title": "BTS Seoul Concert 2021",
+                "subtitle": "Going into this, I didn’t know what to expect. I have known bts for a very long time and all army’s know that you should expect the unexpected from bts because they’re all amazing!!!",
+                "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1596348698/KOREAN%20RESTAURANT/04e22750296773c471546b7fd4d0f49c.jpg",
+                "buttons": [
                     {
                         "type": "postback",
-                        "title": "ORDER",
-                        "payload": "order",
+                        "title": "Pick",
+                        "payload": "tix",
                     }
                 ],
             }]
@@ -44,61 +52,4 @@ const orderAgain = {
     }
 }
 
-const menu = {
-    "attachment": {
-        "type": "template",
-        "payload": {
-            "template_type": "generic",
-            "elements": [{
-                "title": "Bulgogi",
-                "subtitle": "Price: IDR 45.000",
-                "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592231892/KOREAN%20RESTAURANT/Bulgogi.jpg",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Pick",
-                        "payload": "Bulgogi",
-                    }
-                ],
-            },
-            {
-                "title": "Samgyetang",
-                "subtitle": "Price: IDR 55.000",
-                "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592231889/KOREAN%20RESTAURANT/Samgyetang.jpg",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Pick",
-                        "payload": "Samgyetang",
-                    }
-                ],
-            },
-            {
-                "title": "Kimchi",
-                "subtitle": "Price: IDR 30.000",
-                "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592231890/KOREAN%20RESTAURANT/Kimchi.jpg",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Pick",
-                        "payload": "Kimchi",
-                    }
-                ],
-            },
-            {
-                "title": "Bibimpab",
-                "subtitle": "Price: IDR 42.000",
-                "image_url": "https://res.cloudinary.com/duzt2dvg6/image/upload/v1592231890/KOREAN%20RESTAURANT/Bibimbap.jpg",
-                "buttons": [
-                    {
-                        "type": "postback",
-                        "title": "Pick",
-                        "payload": "Bibimpab",
-                    }
-                ],
-            }]
-        }
-    }
-}
-
-module.exports = { welcome, menu, orderAgain }
+module.exports = { welcome, cards }
