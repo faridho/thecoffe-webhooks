@@ -60,7 +60,7 @@ const video = {
             "elements": [
                 {
                     "media_type": "video",
-                    "url": "https://web.facebook.com/103593567765590/videos/630146130875938/"
+                    "url": "https://business.facebook.com/103593567765590/videos/630146130875938/"
                 }
             ]
         }
