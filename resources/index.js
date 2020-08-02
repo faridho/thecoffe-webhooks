@@ -31,7 +31,7 @@ const cards = {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Pick",
+                        "title": "Show Thriler",
                         "payload": "detail",
                     }
                 ],
@@ -43,7 +43,7 @@ const cards = {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Pick",
+                        "title": "Buy Ticket",
                         "payload": "tix",
                     }
                 ],
