@@ -94,7 +94,21 @@ function handlePostback(sender_psid, received_postback) {
     if(payload === 'menu') {
         response = postbackData[payload]
     } else {
-        response = postbackData['location']
+        response = {
+            "mid": "m_AG5Hz2Uq7tuwNEhXfYYKj8mJEM_QPpz5jdCK48PnKAjSdjfipqxqMvK8ma6AC8fplwlqLP_5cgXIbu7I3rBN0P",
+            "attachments": [
+                {
+                    "title": "Facebook HQ",
+                    "type": "location",
+                    "payload": {
+                        "coordinates": {
+                            "lat": 37.483872693672,
+                            "long": -122.14900441942
+                        }
+                    }
+                }
+            ]
+        }
     }
 
     callSendAPI(sender_psid, response);
