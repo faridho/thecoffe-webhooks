@@ -4,7 +4,7 @@
 # Screenshot
 ![alt_text](sc/sc.jpg)
 
-# Full Doc
+# Full Documentation
 
 Facebook For Developer provide any full documentation here 👉 https://developers.facebook.com/products/messenger/
 
