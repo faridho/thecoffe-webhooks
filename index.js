@@ -66,13 +66,12 @@ function handlePostback(sender_psid, received_postback) {
     console.log(payload)
     const postbackData = {
         'menu': resources.menu,
-        //'detail': resources.detail,
+        'video': resources.video,
         //'tix': resources.tix
     }
 
-    if (payload === 'menu') {
-        response = postbackData[payload]
-    }
+    
+    response = postbackData[payload]
 
     callSendAPI(sender_psid, response);
 }

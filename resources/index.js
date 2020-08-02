@@ -31,8 +31,8 @@ const menu = {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Show Thriler",
-                        "payload": "detail",
+                        "title": "Show Trailer",
+                        "payload": "video",
                     }
                 ],
             },
@@ -43,7 +43,7 @@ const menu = {
                 "buttons": [
                     {
                         "type": "postback",
-                        "title": "Buy Ticketqq",
+                        "title": "Buy Ticket",
                         "payload": "tix",
                     }
                 ],
@@ -52,4 +52,19 @@ const menu = {
     }
 }
 
-module.exports = { welcome, menu }
+const video = {
+    "attachment": {
+        "type": "template",
+        "payload": {
+            "template_type": "media",
+            "elements": [
+                {
+                    "media_type": "video",
+                    "url": "https://web.facebook.com/103593567765590/videos/630146130875938/"
+                }
+            ]
+        }
+    }
+}
+
+module.exports = { welcome, menu, video }
