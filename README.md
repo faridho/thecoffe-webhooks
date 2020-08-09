@@ -1,5 +1,5 @@
 # Facebook Messenger Bot
-📨 A Facebook Messenger bot is a chatbot that lives in Facebook Messenger.
+📨 A Facebook Messenger bot is a chatbot that lives in Facebook Messenger
 
 # Screenshot
 ![alt_text](sc/sc.jpg)
